@@ -1,0 +1,143 @@
+:root {
+    --bg-c: #fff;
+    --menu-c: #F9F9F9;
+    --h-c: #22202E;
+    --second-menu-c: #2A254B;
+    --main-text-c: #2A254B;
+    --second-text-c: #FFF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+p,
+a,
+button {
+    font-family: 'Roboto Slab', serif;
+    line-height: normal;
+}
+
+img {
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+
+.company-name-and-mobile-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-name-and-mobile-buttons ul {
+    display: flex;
+    gap: 4px;
+}
+
+.search,
+.open-menu {
+    padding: 8px;
+    border: none;
+    background-color: inherit;
+}
+
+.desktop-buttons,
+.main-products-desktop {
+    display: none;
+}
+
+.company-name h2 {
+    padding: 20px 0;
+    color: var(--h-c);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* HERO */
+
+.hero .container {
+    padding: 28px 0 0 0;
+}
+
+.hero-content-container {
+    padding: 0 20px;
+}
+
+.hero-content-container h1 {
+    color: var(--main-text-c);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.hero-text {
+    color: var(--main-text-c);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-text-desktop {
+    display: none;
+}
+
+.our-collection {
+    display: block;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    padding: 12px 24px;
+    background-color: var(--menu-c);
+    color: var(--main-text-c);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.example-design {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Playfair+Display:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="company-name-and-mobile-buttons">
+          <a href="" class="company-name"> <h2>Avion</h2></a>
+          <ul>
+            <li>
+              <button type="button" class="search">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#search_icon"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="open-menu">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#menu_icon"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="desktop-buttons">
+          <ul class="desktop-buttons-list">
+            <li>
+              <button type="button" class="shop-button">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#shopping_cart_icon"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="account-button">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#user_icon"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="main-products-desktop">
+          <nav>
+            <ul class="main-products">
+              <li><a href="#">Plant pots</a></li>
+              <li><a href="#">Ceramics</a></li>
+              <li><a href="#">Tables</a></li>
+              <li><a href="#">Chairs</a></li>
+              <li><a href="#">Crockery</a></li>
+              <li><a href="#">Tableware</a></li>
+              <li><a href="#">Cutlery</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- HERO START -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content-container">
+            <h1>Luxury homeware for people who love timeless design quality</h1>
+            <p class="hero-text">
+              With our new collection, view over 400 bespoke pieces from
+              homeware through to furniture today
+            </p>
+            <p class="hero-text-desktop">
+              Shop the new Spring 2022 collection today
+            </p>
+            <a class="our-collection">View collection</a>
+          </div>
+          <img
+            class="example-design"
+            srcset="
+              ./images/hero/render_hero.webp  1x,
+              ./images/hero/render_hero2x.jpg 2x
+            "
+            src="./images/hero/render_hero.webp"
+            alt="Design example"
+            width="390"
+          />
+        </div>
+      </section>
+      <!-- HERO END -->
+
+      <!-- ADVANTAGE START -->
+      <section class="advantages">
+        <div class="container">
+          <h2>What makes our brand different</h2>
+          <ul class="advantages-list">
+            <li class="advantage-item">
+              <div class="advantage-container">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#delivery"></use>
+                </svg>
+                <h3>Next day as standard</h3>
+                <p>
+                  Order before 3pm and get your order the next day as standard
+                </p>
+              </div>
+            </li>
+            <li class="advantage-item">
+              <div class="advantage-container">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#checkmark_outline"></use>
+                </svg>
+                <h3>Made by true artisans</h3>
+                <p>
+                  Handmade crafted goods made with real passion and craftmanship
+                </p>
+              </div>
+            </li>
+            <li class="advantage-item">
+              <div class="advantage-container">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#purchase_icon"></use>
+                </svg>
+                <h3>Unbeatable prices</h3>
+                <p>
+                  For our materials and quality you won't find better prices
+                  anywhere
+                </p>
+              </div>
+            </li>
+            <li class="advantage-item">
+              <div class="advantage-container">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#sprout_icon"></use>
+                </svg>
+                <h3>Recycled packaging</h3>
+                <p>
+                  We use 100% recycled to ensure our footprint is more
+                  manageable
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ADVATNAGE END -->
+
+      <!-- FAVORITE PRODUCTS START -->
+      <section class="favorite-products">
+        <div class="container">
+          <ul class="favorite-products-list">
+            <li>
+              <div class="favorite-products-item-container">
+                <a href="#">
+                  <img
+                    srcset="
+                      ./images/favorite_products/rustic_vase.webp  1x,
+                      ./images/favorite_products/rustic_vase2x.png 2x
+                    "
+                    src="./images/favorite_products/rustic_vase.webp"
+                    alt="Rustic Vase Set"
+                    width="163"
+                    height="201"
+                  />
+                  <h3>Rustic Vase Set</h3>
+                  <p>£155</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-products-item-container">
+                <a href="#">
+                  <img
+                    srcset="
+                      ./images/favorite_products/lucy_lamp.webp  1x,
+                      ./images/favorite_products/lucy_lamp2x.png 2x
+                    "
+                    src="./images/favorite_products/lucy_lamp.webp"
+                    alt="The Lucy Lamp"
+                    width="163"
+                    height="201"
+                  />
+                  <h3>The Lucy Lamp</h3>
+                  <p>£399</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-products-item-container">
+                <a href="#">
+                  <img
+                    srcset="
+                      ./images/favorite_products/silky_vase.webp  1x,
+                      ./images/favorite_products/silky_vase2x.png 2x
+                    "
+                    src="./images/favorite_products/silky_vase.webp"
+                    alt="The Silky Vase"
+                    width="163"
+                    height="201"
+                  />
+                  <h3>The Silky Vase</h3>
+                  <p>£125</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-products-item-container">
+                <a href="#">
+                  <img
+                    srcset="
+                      ./images/favorite_products/dandy_chair.webp  1x,
+                      ./images/favorite_products/dandy_chair2x.png 2x
+                    "
+                    src="./images/favorite_products/dandy_chair.webp"
+                    alt="The Dandy chair"
+                    width="163"
+                    height="201"
+                  />
+                  <h3>The Dandy chair</h3>
+                  <p>£250</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="coolection-link">View collection</a>
+        </div>
+      </section>
+      <!-- FAVORITE PRODUCTS END -->
+
+      <!-- SMALL IDEA START -->
+      <section class="small-idea">
+        <div class="container">
+          <ul class="small-idea-content">
+            <li class="small-idea-text-part">
+              <div class="small-idea-part-container">
+                <h2>It started with a small idea</h2>
+                <p>
+                  A global brand with local beginnings, our story begain in a
+                  small studio in South London in early 2014
+                </p>
+                <a href="">View collection</a>
+              </div>
+            </li>
+            <li class="small-idea-image-part">
+              <div class="small-idea-part-container">
+                <img
+                  srcset="
+                    ./images/small_idea/small_idea_image.webp  1x,
+                    ./images/small_idea/small_idea_image2x.png 2x
+                  "
+                  src="./images/small_idea/small_idea_image.webp"
+                  alt="Design example"
+                  width="342"
+                  height="259"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- SMALL IDEA END -->
+
+      <!-- JOIN CLUB START -->
+      <section class="join-club">
+        <div class="container">
+          <h2>Join the club and get the benefits</h2>
+          <p>
+            Sign up for our newsletter and receive exclusive offers on new
+            ranges, sales, pop up stores and more
+          </p>
+          <ul class="subscribe-advantages-list">
+            <li>
+              <div class="subscribe-advantage-item-container">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#checkmark"></use>
+                </svg>
+                <p>Exclusive offers</p>
+              </div>
+            </li>
+            <li>
+              <div class="subscribe-advantage-item-container">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#checkmark"></use>
+                </svg>
+                <p>Free events</p>
+              </div>
+            </li>
+            <li>
+              <div class="subscribe-advantage-item-container">
+                <svg width="16" height="16">
+                  <use href="./icons/sprite.svg#checkmark"></use>
+                </svg>
+                <p>Large discounts</p>
+              </div>
+            </li>
+          </ul>
+          <form>
+            <div class="subscribe-form-container">
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="join-club-form-input"
+                placeholder="your@email.com"
+                required
+              />
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- JOIN CLUB END -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="categoiers-list-container">
+          <h3>Categories</h3>
+          <ul>
+            <li>
+              <div><a href="">Categories</a></div>
+            </li>
+            <li>
+              <div><a href="">Furniture</a></div>
+            </li>
+            <li>
+              <div><a href="">Homeware</a></div>
+            </li>
+            <li>
+              <div><a href="">Plant pots</a></div>
+            </li>
+            <li>
+              <div><a href="">Chairs</a></div>
+            </li>
+            <li>
+              <div><a href="">Crockery</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-list-container">
+          <h3>Menu</h3>
+          <nav>
+            <ul>
+              <li>
+                <div><a href="">New arrivals</a></div>
+              </li>
+              <li>
+                <div><a href="">Best sellers</a></div>
+              </li>
+              <li>
+                <div><a href="">Recently viewed</a></div>
+              </li>
+              <li>
+                <div><a href="">Popular this week</a></div>
+              </li>
+              <li>
+                <div><a href="">All products</a></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="our-company-list-container">
+          <h3>Our company</h3>
+          <ul>
+            <li>
+              <div><a href="">About us</a></div>
+            </li>
+            <li>
+              <div><a href="">Vacancies</a></div>
+            </li>
+            <li>
+              <div><a href="">Contact us</a></div>
+            </li>
+            <li>
+              <div><a href="">Privacy</a></div>
+            </li>
+            <li>
+              <div><a href="">Returns policy</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe-footer">
+          <h3>Join our mailing list</h3>
+          <form>
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              class="join-club-form-input-footer"
+              placeholder="your@email.com"
+              required
+            />
+            <button type="button">Sign up</button>
+          </form>
+        </div>
+        <div class="copyright">
+          <p>Copyright 2022 Avion LTD</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
