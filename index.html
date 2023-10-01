@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Avion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -89,16 +89,30 @@
             </p>
             <a class="our-collection">View collection</a>
           </div>
-          <img
-            class="example-design"
-            srcset="
-              ./images/hero/render_hero.webp  1x,
-              ./images/hero/render_hero2x.jpg 2x
-            "
-            src="./images/hero/render_hero.webp"
-            alt="Design example"
-            width="390"
-          />
+          <div class="example-design-container">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./images/hero/render_hero_mobile.webp   1x,
+                  ./images/hero/render_hero2x_mobile.webp 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./images/hero/render_hero.webp  1x,
+                  ./images/hero/render_hero2x.jpg 2x
+                "
+              />
+              <img
+                class="example-design"
+                src="./images/hero/render_hero.webp"
+                alt="Design example"
+                width="390"
+              />
+            </picture>
+          </div>
         </div>
       </section>
       <!-- HERO END -->
@@ -106,7 +120,7 @@
       <!-- ADVANTAGE START -->
       <section class="advantages">
         <div class="container">
-          <h2>What makes our brand different</h2>
+          <h2 class="what-makes">What makes our brand different</h2>
           <ul class="advantages-list">
             <li class="advantage-item">
               <div class="advantage-container">
@@ -168,13 +182,11 @@
                 <a href="#">
                   <img
                     srcset="
-                      ./images/favorite_products/rustic_vase.webp  1x,
-                      ./images/favorite_products/rustic_vase2x.png 2x
+                      ./images/favorite_products/rustic_vase.webp   1x,
+                      ./images/favorite_products/rustic_vase2x.webp 2x
                     "
                     src="./images/favorite_products/rustic_vase.webp"
                     alt="Rustic Vase Set"
-                    width="163"
-                    height="201"
                   />
                   <h3>Rustic Vase Set</h3>
                   <p>£155</p>
@@ -186,13 +198,11 @@
                 <a href="#">
                   <img
                     srcset="
-                      ./images/favorite_products/lucy_lamp.webp  1x,
-                      ./images/favorite_products/lucy_lamp2x.png 2x
+                      ./images/favorite_products/lucy_lamp.webp   1x,
+                      ./images/favorite_products/lucy_lamp2x.webp 2x
                     "
                     src="./images/favorite_products/lucy_lamp.webp"
                     alt="The Lucy Lamp"
-                    width="163"
-                    height="201"
                   />
                   <h3>The Lucy Lamp</h3>
                   <p>£399</p>
@@ -204,13 +214,11 @@
                 <a href="#">
                   <img
                     srcset="
-                      ./images/favorite_products/silky_vase.webp  1x,
-                      ./images/favorite_products/silky_vase2x.png 2x
+                      ./images/favorite_products/silky_vase.webp   1x,
+                      ./images/favorite_products/silky_vase2x.webp 2x
                     "
                     src="./images/favorite_products/silky_vase.webp"
                     alt="The Silky Vase"
-                    width="163"
-                    height="201"
                   />
                   <h3>The Silky Vase</h3>
                   <p>£125</p>
@@ -222,13 +230,11 @@
                 <a href="#">
                   <img
                     srcset="
-                      ./images/favorite_products/dandy_chair.webp  1x,
-                      ./images/favorite_products/dandy_chair2x.png 2x
+                      ./images/favorite_products/dandy_chair.webp   1x,
+                      ./images/favorite_products/dandy_chair2x.webp 2x
                     "
                     src="./images/favorite_products/dandy_chair.webp"
                     alt="The Dandy chair"
-                    width="163"
-                    height="201"
                   />
                   <h3>The Dandy chair</h3>
                   <p>£250</p>
@@ -236,7 +242,7 @@
               </div>
             </li>
           </ul>
-          <a href="#" class="coolection-link">View collection</a>
+          <a href="#" class="collection-link">View collection</a>
         </div>
       </section>
       <!-- FAVORITE PRODUCTS END -->
@@ -246,7 +252,7 @@
         <div class="container">
           <ul class="small-idea-content">
             <li class="small-idea-text-part">
-              <div class="small-idea-part-container">
+              <div class="small-idea-text-part-container">
                 <h2>It started with a small idea</h2>
                 <p>
                   A global brand with local beginnings, our story begain in a
@@ -257,16 +263,28 @@
             </li>
             <li class="small-idea-image-part">
               <div class="small-idea-part-container">
-                <img
-                  srcset="
-                    ./images/small_idea/small_idea_image.webp  1x,
-                    ./images/small_idea/small_idea_image2x.png 2x
-                  "
-                  src="./images/small_idea/small_idea_image.webp"
-                  alt="Design example"
-                  width="342"
-                  height="259"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/small_idea/small_idea_image.webp   1x,
+                      ./images/small_idea/small_idea_image2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/small_idea/small_idea_image_desktop.webp   1x,
+                      ./images/small_idea/small_idea_image2x_desktop.webp 2x
+                    "
+                  />
+                  <img
+                    src="./images/small_idea/small_idea_image.webp"
+                    alt="Design example"
+                    width="342"
+                    height="259"
+                  />
+                </picture>
               </div>
             </li>
           </ul>
@@ -278,7 +296,7 @@
       <section class="join-club">
         <div class="container">
           <h2>Join the club and get the benefits</h2>
-          <p>
+          <p class="join-club-text">
             Sign up for our newsletter and receive exclusive offers on new
             ranges, sales, pop up stores and more
           </p>
@@ -318,7 +336,7 @@
                 placeholder="your@email.com"
                 required
               />
-              <button type="submit">Sign up</button>
+              <button type="submit" class="subscribe-button">Sign up</button>
             </div>
           </form>
         </div>
@@ -327,84 +345,88 @@
     </main>
     <footer>
       <div class="container">
-        <div class="categoiers-list-container">
-          <h3>Categories</h3>
-          <ul>
-            <li>
-              <div><a href="">Categories</a></div>
-            </li>
-            <li>
-              <div><a href="">Furniture</a></div>
-            </li>
-            <li>
-              <div><a href="">Homeware</a></div>
-            </li>
-            <li>
-              <div><a href="">Plant pots</a></div>
-            </li>
-            <li>
-              <div><a href="">Chairs</a></div>
-            </li>
-            <li>
-              <div><a href="">Crockery</a></div>
-            </li>
-          </ul>
-        </div>
-        <div class="menu-list-container">
-          <h3>Menu</h3>
-          <nav>
+        <div class="footer-menu-container">
+          <div class="categoiers-list-container">
+            <h3>Categories</h3>
             <ul>
               <li>
-                <div><a href="">New arrivals</a></div>
+                <div><a href="">Categories</a></div>
               </li>
               <li>
-                <div><a href="">Best sellers</a></div>
+                <div><a href="">Furniture</a></div>
               </li>
               <li>
-                <div><a href="">Recently viewed</a></div>
+                <div><a href="">Homeware</a></div>
               </li>
               <li>
-                <div><a href="">Popular this week</a></div>
+                <div><a href="">Plant pots</a></div>
               </li>
               <li>
-                <div><a href="">All products</a></div>
+                <div><a href="">Chairs</a></div>
+              </li>
+              <li>
+                <div><a href="">Crockery</a></div>
               </li>
             </ul>
-          </nav>
-        </div>
-        <div class="our-company-list-container">
-          <h3>Our company</h3>
-          <ul>
-            <li>
-              <div><a href="">About us</a></div>
-            </li>
-            <li>
-              <div><a href="">Vacancies</a></div>
-            </li>
-            <li>
-              <div><a href="">Contact us</a></div>
-            </li>
-            <li>
-              <div><a href="">Privacy</a></div>
-            </li>
-            <li>
-              <div><a href="">Returns policy</a></div>
-            </li>
-          </ul>
+          </div>
+          <div class="menu-list-container">
+            <h3>Menu</h3>
+            <nav>
+              <ul>
+                <li>
+                  <div><a href="">New arrivals</a></div>
+                </li>
+                <li>
+                  <div><a href="">Best sellers</a></div>
+                </li>
+                <li>
+                  <div><a href="">Recently viewed</a></div>
+                </li>
+                <li>
+                  <div><a href="">Popular this week</a></div>
+                </li>
+                <li>
+                  <div><a href="">All products</a></div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="our-company-list-container">
+            <h3>Our company</h3>
+            <ul>
+              <li>
+                <div><a href="">About us</a></div>
+              </li>
+              <li>
+                <div><a href="">Vacancies</a></div>
+              </li>
+              <li>
+                <div><a href="">Contact us</a></div>
+              </li>
+              <li>
+                <div><a href="">Privacy</a></div>
+              </li>
+              <li>
+                <div><a href="">Returns policy</a></div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="subscribe-footer">
           <h3>Join our mailing list</h3>
-          <form>
-            <input
-              type="email"
-              name="user-email"
-              id="user-email"
-              class="join-club-form-input-footer"
-              placeholder="your@email.com"
-              required
-            />
-            <button type="button">Sign up</button>
-          </form>
+          <div class="footer-subscribe-container">
+            <form>
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="join-club-form-input-footer"
+                placeholder="your@email.com"
+                required
+              />
+              <button type="button" class="subscribe-button">Sign up</button>
+            </form>
+          </div>
         </div>
         <div class="copyright">
           <p>Copyright 2022 Avion LTD</p>

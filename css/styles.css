@@ -54,6 +54,7 @@ button {
 }
 
 img {
+    max-width: 100%;
     display: inline-block;
 }
 
@@ -92,14 +93,14 @@ img {
 .company-name h2 {
     padding: 20px 0;
     color: var(--h-c);
-    font-size: 16px;
+    font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
 }
 
 /* HERO */
 
 .hero .container {
-    padding: 28px 0 0 0;
+    padding: 28px 0 14px 0;
 }
 
 .hero-content-container {
@@ -108,14 +109,14 @@ img {
 
 .hero-content-container h1 {
     color: var(--main-text-c);
-    font-size: 20px;
+    font-size: clamp(20px, 4.5vw, 24px);
     font-weight: 400;
     margin-bottom: 8px;
 }
 
 .hero-text {
     color: var(--main-text-c);
-    font-size: 12px;
+    font-size: clamp(14px, 2.5vw, 18px);
     margin-bottom: 20px;
 }
 
@@ -130,14 +131,361 @@ img {
     padding: 12px 24px;
     background-color: var(--menu-c);
     color: var(--main-text-c);
-    font-size: 12px;
+    font-size: clamp(14px, 2.5vw, 18px);
     line-height: 1.5;
+    cursor: pointer;
 }
 
 .example-design {
     display: block;
     object-fit: cover;
+    object-position: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* ADVANTAGES */
+
+.advantages .container {
+    padding-top: 14px;
+    padding-bottom: 36px;
+}
+
+.what-makes {
+    text-align: center;
+    color: var(--main-text-c);
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.advantage-container {
+    background-color: var(--menu-c);
+    padding: 32px 20px;
+    max-width: 385px;
+    transition: transform 200ms ease-in-out;
+}
+
+.advantage-container:hover {
+    transform: scale(1.1);
+}
+
+.advantage-container svg {
+    margin-bottom: 12px;
+    fill: var(--main-text-c);
+}
+
+.advantage-container h3 {
+    color: var(--main-text-c);
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.advantage-container p {
+    color: var(--main-text-c);
+    font-size: clamp(14px, 2.5vw, 18px);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* FAVORITE PRODUCTS */
+
+.favorite-products .container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.favorite-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    row-gap: 16px;
+    margin-bottom: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite-products-list li {
+    flex-basis: calc((100% - 12px) / 2);
+}
+
+.favorite-products-item-container img {
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.favorite-products-item-container h3 {
+    color: var(--main-text-c);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.favorite-products-item-container p {
+    color: var(--main-text-c);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.collection-link {
+    display: block;
+    text-align: center;
+    background-color: var(--menu-c);
+    padding: 12px 24px;
+    color: var(--main-text-c);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* SMALL IDEA */
+
+.small-idea .container {
+    padding: 32px 24px;
+}
+
+.small-idea-text-part {
+    margin-bottom: 24px;
+}
+
+.small-idea-text-part-container {
+    background-color: var(--main-text-c);
+    padding: 36px 32px 30px 32px;
+}
+
+.small-idea-text-part-container h2 {
+    margin-bottom: 12px;
+    color: var(--bg-c);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.small-idea-text-part-container p {
+    margin-bottom: 56px;
+    color: var(--bg-c);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.small-idea-text-part-container a {
+    display: block;
+    text-align: center;
+    padding: 16px 32px;
+    background-color: rgba(249, 249, 249, 0.15);
+    color: var(--bg-c);
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background-color 250ms ease-in-out;
+}
+
+.small-idea-text-part-container a:hover {
+    background-color: #22202E;
+}
+
+.small-idea-part-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* JOIN CLUB */
+
+.join-club {
+    background-image: url(../images/join_club/Image_mobile.webp),
+        linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+            rgba(177, 150, 0, 0.6));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.join-club .container {
+    padding: 24px 24px 35px 24px;
+}
+
+.join-club .container h2 {
+    color: var(--bg-c);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+
+.join-club-text {
+    color: var(--bg-c);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.subscribe-advantages-list {
+    margin-bottom: 28px;
+}
+
+.subscribe-advantage-item-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subscribe-advantage-item-container svg {
+    fill: var(--bg-c);
+}
+
+.subscribe-advantage-item-container p {
+    color: var(--bg-c);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.subscribe-form-container {
+    position: relative;
+}
+
+.join-club-form-input {
+    width: 100%;
+    padding: 18px 128px 18px 16px;
+    border: none;
+    outline: transparent;
+    color: var(--main-text-c);
+    font-size: 16px;
+}
+
+.join-club-form-input::placeholder {
+    color: var(--main-text-c);
+    font-size: 16px;
+    opacity: 0.2;
+}
+
+.subscribe-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px 32px;
+    border: none;
+    background-color: var(--main-text-c);
+    color: var(--bg-c);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out,
+        color 250ms ease-in-out;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: var(--h-c);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--main-text-c);
+}
+
+footer .container {
+    padding: 40px 24px 20px 24px;
+}
+
+.footer-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 96px;
+    row-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.categoiers-list-container h3,
+.menu-list-container h3,
+.our-company-list-container h3 {
+    color: var(--bg-c);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.categoiers-list-container li:not(:last-child),
+.menu-list-container li:not(:last-child),
+.our-company-list-container li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.categoiers-list-container li,
+.menu-list-container li,
+.our-company-list-container li {
+    color: var(--bg-c);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.subscribe-footer h3 {
+    color: var(--bg-c);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.footer-subscribe-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-subscribe-container::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #4E4D93;
+    display: block;
+    margin-top: 16px;
+}
+
+.join-club-form-input-footer {
+    background-color: var(--h-c);
+    width: 100%;
+    padding: 19px 128px 19px 16px;
+    border: none;
+    outline: transparent;
+    color: var(--bg-c);
+    font-size: 16px;
+}
+
+.join-club-form-input-footer::placeholder {
+    color: var(--bg-c);
+    font-size: 16px;
+    opacity: 0.2;
+}
+
+.footer-subscribe-container .subscribe-button {
+    background-color: var(--bg-c);
+    color: var(--main-text-c);
+}
+
+.footer-subscribe-container .subscribe-button:hover {
+    background-color: var(--h-c);
+    color: var(--bg-c);
+}
+
+.copyright {
+    text-align: center;
+    color: var(--bg-c);
+    font-size: 14px;
+    font-weight: 400;
 }
