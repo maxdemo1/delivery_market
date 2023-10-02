@@ -22,9 +22,9 @@
   <body>
     <header>
       <div class="container">
-        <div class="company-name-and-mobile-buttons">
+        <div class="company-name-and-buttons">
           <a href="" class="company-name"> <h2>Avion</h2></a>
-          <ul>
+          <ul class="mobile-buttons">
             <li>
               <button type="button" class="search">
                 <svg width="16" height="16">
@@ -40,9 +40,7 @@
               </button>
             </li>
           </ul>
-        </div>
-        <div class="desktop-buttons">
-          <ul class="desktop-buttons-list">
+          <ul class="desktop-buttons">
             <li>
               <button type="button" class="shop-button">
                 <svg width="16" height="16">
@@ -345,91 +343,139 @@
     </main>
     <footer>
       <div class="container">
-        <div class="footer-menu-container">
-          <div class="categoiers-list-container">
-            <h3>Categories</h3>
-            <ul>
-              <li>
-                <div><a href="">Categories</a></div>
-              </li>
-              <li>
-                <div><a href="">Furniture</a></div>
-              </li>
-              <li>
-                <div><a href="">Homeware</a></div>
-              </li>
-              <li>
-                <div><a href="">Plant pots</a></div>
-              </li>
-              <li>
-                <div><a href="">Chairs</a></div>
-              </li>
-              <li>
-                <div><a href="">Crockery</a></div>
-              </li>
-            </ul>
-          </div>
-          <div class="menu-list-container">
-            <h3>Menu</h3>
-            <nav>
+        <div class="footer-menu-and-form">
+          <div class="footer-menu-container">
+            <div class="categoiers-list-container">
+              <h3>Categories</h3>
               <ul>
                 <li>
-                  <div><a href="">New arrivals</a></div>
+                  <div><a href="">Categories</a></div>
                 </li>
                 <li>
-                  <div><a href="">Best sellers</a></div>
+                  <div><a href="">Furniture</a></div>
                 </li>
                 <li>
-                  <div><a href="">Recently viewed</a></div>
+                  <div><a href="">Homeware</a></div>
                 </li>
                 <li>
-                  <div><a href="">Popular this week</a></div>
+                  <div><a href="">Plant pots</a></div>
                 </li>
                 <li>
-                  <div><a href="">All products</a></div>
+                  <div><a href="">Chairs</a></div>
+                </li>
+                <li>
+                  <div><a href="">Crockery</a></div>
                 </li>
               </ul>
-            </nav>
+            </div>
+            <div class="menu-list-container">
+              <h3>Menu</h3>
+              <nav>
+                <ul>
+                  <li>
+                    <div><a href="">New arrivals</a></div>
+                  </li>
+                  <li>
+                    <div><a href="">Best sellers</a></div>
+                  </li>
+                  <li>
+                    <div><a href="">Recently viewed</a></div>
+                  </li>
+                  <li>
+                    <div><a href="">Popular this week</a></div>
+                  </li>
+                  <li>
+                    <div><a href="">All products</a></div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="our-company-list-container">
+              <h3>Our company</h3>
+              <ul>
+                <li>
+                  <div><a href="">About us</a></div>
+                </li>
+                <li>
+                  <div><a href="">Vacancies</a></div>
+                </li>
+                <li>
+                  <div><a href="">Contact us</a></div>
+                </li>
+                <li>
+                  <div><a href="">Privacy</a></div>
+                </li>
+                <li>
+                  <div><a href="">Returns policy</a></div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="our-company-list-container">
-            <h3>Our company</h3>
-            <ul>
-              <li>
-                <div><a href="">About us</a></div>
-              </li>
-              <li>
-                <div><a href="">Vacancies</a></div>
-              </li>
-              <li>
-                <div><a href="">Contact us</a></div>
-              </li>
-              <li>
-                <div><a href="">Privacy</a></div>
-              </li>
-              <li>
-                <div><a href="">Returns policy</a></div>
-              </li>
-            </ul>
+          <div class="subscribe-footer">
+            <h3>Join our mailing list</h3>
+            <div class="footer-subscribe-container">
+              <form>
+                <input
+                  type="email"
+                  name="user-email"
+                  id="user-email"
+                  class="join-club-form-input-footer"
+                  placeholder="your@email.com"
+                  required
+                />
+                <button type="button" class="subscribe-button">Sign up</button>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="subscribe-footer">
-          <h3>Join our mailing list</h3>
-          <div class="footer-subscribe-container">
-            <form>
-              <input
-                type="email"
-                name="user-email"
-                id="user-email"
-                class="join-club-form-input-footer"
-                placeholder="your@email.com"
-                required
-              />
-              <button type="button" class="subscribe-button">Sign up</button>
-            </form>
+        <div class="copyright-and-footer-social-networks">
+          <div class="copyright">
+            <p>Copyright 2022 Avion LTD</p>
           </div>
-        </div>
-        <div class="copyright">
-          <p>Copyright 2022 Avion LTD</p>
+          <ul class="footer-social-networks">
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#linkedin_logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#facebook_logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#instargam_logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#skype_logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#twitter_logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#pinterest_logo"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

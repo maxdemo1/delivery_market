@@ -5,6 +5,7 @@
     --second-menu-c: #2A254B;
     --main-text-c: #2A254B;
     --second-text-c: #FFF;
+    --third-text-c: #726E8D;
 }
 
 body {
@@ -60,20 +61,21 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* HEADER */
 
-.company-name-and-mobile-buttons {
+.company-name-and-buttons {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.company-name-and-mobile-buttons ul {
+.company-name-and-buttons .mobile-buttons {
     display: flex;
     gap: 4px;
 }
@@ -378,7 +380,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 16px 32px;
+    padding: 15.5px 32px;
     border: none;
     background-color: var(--main-text-c);
     color: var(--bg-c);
@@ -403,6 +405,20 @@ footer {
 
 footer .container {
     padding: 40px 24px 20px 24px;
+}
+
+.footer-menu-and-form {
+    position: relative;
+}
+
+.footer-menu-and-form::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #4E4D93;
+    display: block;
+    position: absolute;
+    bottom: -16px;
 }
 
 .footer-menu-container {
@@ -445,16 +461,7 @@ footer .container {
 
 .footer-subscribe-container {
     position: relative;
-    margin-bottom: 20px;
-}
-
-.footer-subscribe-container::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #4E4D93;
-    display: block;
-    margin-top: 16px;
+    margin-bottom: 36px;
 }
 
 .join-club-form-input-footer {
@@ -488,4 +495,283 @@ footer .container {
     color: var(--bg-c);
     font-size: 14px;
     font-weight: 400;
+}
+
+.footer-social-networks {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* ADVANTAGES */
+
+    .advantages-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .advantage-item {
+        flex-basis: calc((100% - 16px)/2);
+    }
+
+    .advantage-container {
+        padding: 16px 12px;
+        margin: 0 auto;
+    }
+
+    /* PRODUCT LIST */
+
+    .favorite-products-list {
+        gap: 16px
+    }
+
+    .favorite-products-list li {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+
+    .favorite-products-item-container {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    /* SMALL IDEA*/
+
+    .small-idea-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .small-idea-text-part {
+        margin: 0;
+    }
+
+    .small-idea-text-part-container {
+        padding: 20px 32px 20px 32px;
+
+    }
+
+    .small-idea-part-container {
+        min-width: 336px;
+
+    }
+
+    .small-idea-part-container img {
+        max-height: 258px;
+    }
+
+    /* JOIN CLUB */
+
+    .join-club {
+        background-image: url(../images/join_club/desktop.webp),
+            linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+                rgba(177, 150, 0, 0.6));
+    }
+
+    .join-club .container {
+        text-align: center;
+        padding: 80px 24px;
+    }
+
+    .join-club .container h2 {
+        font-size: 32px;
+    }
+
+    .subscribe-advantages-list {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .join-club-text {
+        margin: 0 auto 30px auto;
+        max-width: 470px;
+    }
+
+
+    .subscribe-form-container {
+        max-width: 470px;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    .footer-menu-and-form {
+        display: flex;
+        gap: 80px;
+    }
+
+    .footer-menu-and-form::after {
+        bottom: 24px;
+    }
+
+    .footer-menu-container {
+        gap: 50px;
+        margin-bottom: 72px;
+    }
+
+    .categoiers-list-container {
+        order: 2;
+    }
+
+    .menu-list-container {
+        order: 1;
+    }
+
+    .our-company-list-container {
+        order: 3;
+    }
+
+    .subscribe-footer {
+        flex-grow: 1;
+    }
+
+    .footer-subscribe-container {
+        width: 100%;
+    }
+
+    .copyright-and-footer-social-networks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-social-networks {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .footer-social-networks svg {
+        fill: var(--bg-c);
+        transition: fill 250ms ease-in-out;
+    }
+
+    .footer-social-networks a:hover svg {
+        fill: var(--h-c);
+    }
+}
+
+/* THE KOSTILY */
+
+@media screen and (min-width: 823px) {
+    .small-idea-part-container img {
+        max-height: 234px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1100px) {
+
+    header .container {
+        padding: 0 28px;
+    }
+
+    .company-name-and-buttons .mobile-buttons li:last-child {
+        display: none;
+    }
+
+    .mobile-buttons {
+        order: 1;
+    }
+
+    .company-name {
+        order: 2;
+    }
+
+    .company-name h2 {
+        font-size: 24px;
+    }
+
+    .desktop-buttons {
+        display: flex;
+        order: 3;
+    }
+
+    .desktop-buttons button {
+        padding: 8px;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+    }
+
+    .company-name-and-buttons::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.10);
+    }
+
+    .main-products-desktop {
+        display: block;
+    }
+
+    .main-products {
+        display: flex;
+        gap: 44px;
+        justify-content: center;
+    }
+
+    .main-products a {
+        padding: 20px 0;
+        display: block;
+        color: var(--third-text-c);
+        font-size: 16px;
+    }
+
+    /* HERO */
+
+    .hero .container {
+        background-image: url(../images/hero/render_hero.webp),
+            linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+                rgba(177, 150, 0, 0.6));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1px 1px;
+    }
+
+    .hero-content-container {
+        margin: 130px 80px 130px auto;
+        max-width: 630px;
+        background-color: var(--bg-c);
+        padding: 48px 60px;
+    }
+
+    .hero-content-container h1 {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    .hero-text {
+        display: none;
+    }
+
+    .hero-text-desktop {
+        display: block;
+        color: #5B5676;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 157px;
+    }
+
+    .example-design-container {
+        display: none;
+    }
+
+    .our-collection {
+        margin: 0;
+        font-size: 16px;
+        padding: 16px 32px;
+        max-width: 182px;
+    }
+
+
 }
