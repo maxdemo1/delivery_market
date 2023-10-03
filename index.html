@@ -26,12 +26,24 @@
           <a href="" class="company-name"> <h2>Avion</h2></a>
           <ul class="mobile-buttons">
             <li>
-              <button type="button" class="search">
+              <button type="button" class="search" id="openSearchButton">
                 <svg width="16" height="16">
                   <use href="./icons/sprite.svg#search_icon"></use>
                 </svg>
               </button>
             </li>
+            <form class="header-search hidden" id="searchForm">
+              <div class="header-search-container">
+                <input
+                  type="text"
+                  name="search-on-page"
+                  id="search-on-page"
+                  class="search-on-page"
+                  placeholder="Search"
+                  required
+                />
+              </div>
+            </form>
             <li>
               <button type="button" class="open-menu">
                 <svg width="16" height="16">
@@ -479,5 +491,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

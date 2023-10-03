@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     line-height: normal;
 }
 
@@ -50,7 +50,7 @@ a {
 p,
 a,
 button {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', serif;
     line-height: normal;
 }
 
@@ -66,6 +66,19 @@ img {
     padding: 0 20px;
 }
 
+.hidden {
+    position: absolute;
+    top: -150px;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+.visible {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
 /* HEADER */
 
 .company-name-and-buttons {
@@ -78,13 +91,35 @@ img {
 .company-name-and-buttons .mobile-buttons {
     display: flex;
     gap: 4px;
+    align-items: center;
+    position: relative;
 }
 
 .search,
 .open-menu {
+    cursor: pointer;
     padding: 8px;
     border: none;
     background-color: inherit;
+    transition: transform 250ms ease-in-out;
+}
+
+.search:hover,
+.open-menu:hover {
+    transform: scale(1.2);
+}
+
+.search-on-page {
+    font-weight: 300;
+    padding: 8px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    max-width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    ;
+    outline: none;
 }
 
 .desktop-buttons,
@@ -136,6 +171,15 @@ img {
     font-size: clamp(14px, 2.5vw, 18px);
     line-height: 1.5;
     cursor: pointer;
+    transition: transform 250ms ease-in-out,
+        background-color 250ms ease-in-out,
+        color 250ms ease-in-out;
+}
+
+.our-collection:hover {
+    color: var(--menu-c);
+    background-color: var(--main-text-c);
+    transform: scale(1.05);
 }
 
 .example-design {
@@ -196,7 +240,7 @@ img {
 
 .advantage-container p {
     color: var(--main-text-c);
-    font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(14px, 2.5vw, 16px);
     line-height: 1.5;
     font-weight: 400;
 }
@@ -252,6 +296,15 @@ img {
     color: var(--main-text-c);
     font-size: 14px;
     line-height: 1.5;
+    transition: transform 250ms ease-in-out,
+        background-color 250ms ease-in-out,
+        color 250ms ease-in-out;
+}
+
+.collection-link:hover {
+    color: var(--menu-c);
+    background-color: var(--main-text-c);
+    transform: scale(1.05);
 }
 
 /* SMALL IDEA */
@@ -293,11 +346,13 @@ img {
     color: var(--bg-c);
     font-size: 16px;
     line-height: 1.5;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out,
+        transform 250ms ease-in-out;
 }
 
 .small-idea-text-part-container a:hover {
     background-color: #22202E;
+    transform: scale(1.05);
 }
 
 .small-idea-part-container img {
@@ -394,7 +449,7 @@ img {
 
 .subscribe-button:hover,
 .subscribe-button:focus {
-    background-color: var(--h-c);
+    background-color: var(--third-text-c);
 }
 
 /* FOOTER */
@@ -426,7 +481,7 @@ footer .container {
     flex-wrap: wrap;
     gap: 96px;
     row-gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 
 .categoiers-list-container h3,
@@ -438,18 +493,47 @@ footer .container {
     margin-bottom: 12px;
 }
 
-.categoiers-list-container li:not(:last-child),
-.menu-list-container li:not(:last-child),
-.our-company-list-container li:not(:last-child) {
-    margin-bottom: 12px;
-}
-
 .categoiers-list-container li,
 .menu-list-container li,
 .our-company-list-container li {
     color: var(--bg-c);
     font-size: 14px;
     font-weight: 400;
+}
+
+.categoiers-list-container li a,
+.menu-list-container li a,
+.our-company-list-container li a {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.categoiers-list-container li a,
+.menu-list-container li a,
+.our-company-list-container li a {
+    padding: 6px 0;
+}
+
+.categoiers-list-container li a::after,
+.menu-list-container li a::after,
+.our-company-list-container li a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--bg-c);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in-out;
+}
+
+
+.categoiers-list-container li a:hover::after,
+.menu-list-container li a:hover::after,
+.our-company-list-container li a:hover::after {
+    transform: translateX(0);
 }
 
 .subscribe-footer h3 {
@@ -486,7 +570,7 @@ footer .container {
 }
 
 .footer-subscribe-container .subscribe-button:hover {
-    background-color: var(--h-c);
+    background-color: var(--third-text-c);
     color: var(--bg-c);
 }
 
@@ -539,7 +623,6 @@ footer .container {
 
     .small-idea-content {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         gap: 16px;
     }
@@ -610,7 +693,7 @@ footer .container {
 
     .footer-menu-container {
         gap: 50px;
-        margin-bottom: 72px;
+        margin-bottom: 66px;
     }
 
     .categoiers-list-container {
@@ -651,7 +734,7 @@ footer .container {
     }
 
     .footer-social-networks a:hover svg {
-        fill: var(--h-c);
+        fill: var(--third-text-c);
     }
 }
 
@@ -673,6 +756,11 @@ footer .container {
 
     .company-name-and-buttons .mobile-buttons li:last-child {
         display: none;
+    }
+
+    .search-on-page {
+        left: 0;
+        width: 200px;
     }
 
     .mobile-buttons {
@@ -697,6 +785,11 @@ footer .container {
         background-color: inherit;
         border: none;
         cursor: pointer;
+        transition: transform 250ms ease-in-out;
+    }
+
+    .desktop-buttons button:hover {
+        transform: scale(1.2);
     }
 
     .company-name-and-buttons::after {
@@ -719,11 +812,31 @@ footer .container {
     }
 
     .main-products a {
+        overflow: hidden;
         padding: 20px 0;
         display: block;
         color: var(--third-text-c);
         font-size: 16px;
+        position: relative;
     }
+
+    .main-products a::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: var(--third-text-c);
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        opacity: 0.5;
+        transform: translateX(-100%);
+        transition: transform 250ms ease-in-out;
+    }
+
+    .main-products a:hover::after {
+        transform: translateX(0);
+    }
+
 
     /* HERO */
 
@@ -770,8 +883,89 @@ footer .container {
         margin: 0;
         font-size: 16px;
         padding: 16px 32px;
-        max-width: 182px;
+        max-width: 190px;
     }
 
+    /* ADVANTAGE */
 
+    .advantages .container {
+        padding: 80px;
+    }
+
+    .what-makes {
+        margin-bottom: 36px;
+    }
+
+    .advantages-list {
+        flex-wrap: nowrap;
+        gap: 22px;
+    }
+
+    .advantage-container {
+        padding: 48px;
+        height: 250px;
+    }
+
+    .advantage-container h3 {
+        margin-bottom: 8px;
+        font-size: clamp(16px, 1.45vw, 18px);
+    }
+
+    .advantage-container p {
+        font-size: clamp(12px, 1.05vw, 16px)
+    }
+
+    /* FAVORITE PRODUCTS */
+
+    .favorite-products .container {
+        padding: 28px 80px 40px 80px;
+    }
+
+    .favorite-products-list {
+        flex-wrap: nowrap;
+        gap: 20px
+    }
+
+    .collection-link {
+        padding: 16px 32px;
+        margin: 0 auto;
+        max-width: 190px;
+        font-size: 16px;
+    }
+
+    /* SMALL IDEA */
+
+    .small-idea .container {
+        padding: 60px 80px;
+    }
+
+    .small-idea-text-part,
+    .small-idea-image-part {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .small-idea-text-part-container p {
+        margin-bottom: 205px;
+    }
+
+    .small-idea-part-container img {
+        max-height: 383px;
+        min-height: 383px;
+    }
+
+    /* JOIN CLUB */
+
+    .join-club .container {
+        padding: 90px 24px;
+    }
+
+    .join-club-text {
+        font-size: 18px;
+    }
+
+    /* FOOTER */
+
+    .footer-menu-container {
+        gap: 100px
+    }
 }
