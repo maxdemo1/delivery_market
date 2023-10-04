@@ -340,8 +340,8 @@
             <div class="subscribe-form-container">
               <input
                 type="email"
-                name="user-email"
-                id="user-email"
+                name="user-email-subscribe"
+                id="user-email-subscribe"
                 class="join-club-form-input"
                 placeholder="your@email.com"
                 required
@@ -491,6 +491,84 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal-authorization">
+        <button class="close-authorization">
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <h2 class="authorization-title">Sign In</h2>
+        <form class="authorization-window-container">
+          <div class="login-password-container">
+            <label for="user-name" class="user-data-input-label">Login</label>
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              class="user-data-input"
+              placeholder="Enter your login or email"
+              required
+              maxlength="30"
+              minlength="3"
+            />
+            <label for="user-password" class="user-data-input-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="user-password"
+              id="user-password"
+              class="user-data-input"
+              placeholder="Enter your password"
+              required
+              minlength="8"
+              maxlength="30"
+            />
+            <div class="policy-container">
+              <input
+                type="checkbox"
+                id="user-privacy"
+                name="user-privacy"
+                value="true"
+                class="policy-checkbox"
+                required
+              />
+              <div class="policy-check-icon-container-external">
+                <div class="policy-check-icon-container">
+                  <svg class="checkbox-checked" width="16" height="16">
+                    <use href="./icons/sprite.svg#checkbox_checked"></use>
+                  </svg>
+                </div>
+              </div>
+              <label for="user-privacy" class="policy-label">
+                I accept the terms and conditions of the Privacy Policy
+              </label>
+            </div>
+            <button type="submit" class="sign-in-button">Sign In</button>
+          </div>
+        </form>
+        <div class="not-registred">
+          <p>Not registered?</p>
+          <button type="button">Sign Up</button>
+        </div>
+        <div class="sign-in-social-networks">
+          <h3>Sign In with social networks</h3>
+          <div class="social-networks-buttons">
+            <button type="submit">
+              <svg width="40" height="40">
+                <use href="./icons/sprite.svg#facebook-colored-logo"></use>
+              </svg>
+            </button>
+            <button type="submit">
+              <svg width="40" height="40">
+                <use href="./icons/sprite.svg#google-colored-logo"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
