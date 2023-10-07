@@ -595,6 +595,7 @@ footer .container {
 /* MODAL AUTHORIZATION */
 
 .modal-container {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
