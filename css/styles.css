@@ -121,7 +121,7 @@ img {
     padding: 8px;
     border-radius: 20px;
     position: absolute;
-    top: 0;
+    top: 16px;
     right: 30px;
     max-width: 150px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -371,12 +371,21 @@ img {
 /* JOIN CLUB */
 
 .join-club {
-    background-image: url(../images/join_club/Image_mobile.webp),
+    background-image: url(../images/join_club/mobile/join_1x_mobile.webp),
         linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
             rgba(177, 150, 0, 0.6));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .join-club {
+        background-image: url(../images/join_club/mobile/join_2x_mobile.webp),
+            linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+                rgba(177, 150, 0, 0.6));
+    }
+
 }
 
 .join-club .container {
@@ -867,9 +876,17 @@ footer .container {
     /* JOIN CLUB */
 
     .join-club {
-        background-image: url(../images/join_club/desktop.webp),
+        background-image: url(../images/join_club/desktop/join_1x_desktop.webp),
             linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
                 rgba(177, 150, 0, 0.6));
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+        .join-club {
+            background-image: url(../images/join_club/desktop/join_2x_desktop.webp),
+                linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+                    rgba(177, 150, 0, 0.6));
+        }
     }
 
     .join-club .container {
@@ -959,7 +976,7 @@ footer .container {
 
 /* THE KOSTILY */
 
-@media screen and (min-width: 823px) {
+@media screen and (min-width: 858px) {
     .small-idea-part-container img {
         max-height: 234px;
     }
@@ -1060,13 +1077,21 @@ footer .container {
     /* HERO */
 
     .hero .container {
-        background-image: url(../images/hero/render_hero.webp),
+        background-image: url(../images/hero/desktop/hero_1x_desktop.webp),
             linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
                 rgba(177, 150, 0, 0.6));
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         padding: 1px 1px;
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+        .hero .container {
+            background-image: url(../images/hero/desktop/hero_2x_desktop.webp),
+                linear-gradient(to bottom, rgba(255, 150, 84, 0.6),
+                    rgba(177, 150, 0, 0.6));
+        }
     }
 
     .hero-content-container {
