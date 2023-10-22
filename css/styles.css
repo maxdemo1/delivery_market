@@ -404,7 +404,7 @@ img {
 }
 
 .small-idea-text-part-container a:hover {
-    background-color: #22202E;
+    background-color: var(--h-c);
     transform: scale(1.05);
 }
 
