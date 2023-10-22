@@ -125,7 +125,7 @@ img {
 .visible {
     position: absolute;
     top: 0;
-    left: 32px;
+    right: 0;
     opacity: 1;
     transition: opacity 200ms ease-in-out;
 }
@@ -161,16 +161,15 @@ img {
 }
 
 .search-on-page {
-    font-weight: 300;
+    font-weight: 400;
     padding: 8px;
     border-radius: 20px;
     position: absolute;
-    top: 16px;
-    right: 30px;
-    max-width: 150px;
+    top: 13px;
+    right: 64px;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    ;
     outline: none;
+    width: 140px;
 }
 
 .desktop-buttons,
@@ -183,6 +182,7 @@ img {
     color: var(--h-c);
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* HERO */
@@ -240,6 +240,7 @@ img {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    height: auto;
 }
 
 /* ADVANTAGES */
@@ -323,6 +324,7 @@ img {
     margin-bottom: 20px;
     max-width: 360px;
     width: 100%;
+    height: auto;
 }
 
 .favorite-products-item-container h3 {
@@ -1039,8 +1041,9 @@ footer .container {
     }
 
     .search-on-page {
+        top: 16px;
         left: 0;
-        width: 200px;
+        width: 300px;
     }
 
     .mobile-buttons {
@@ -1256,5 +1259,11 @@ footer .container {
     .footer-menu-container {
 
         gap: 100px
+    }
+
+    .visible {
+
+        top: 0;
+        left: 32px;
     }
 }
